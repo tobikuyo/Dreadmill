@@ -1,5 +1,5 @@
 //
-//  Contants.swift
+//  Constants.swift
 //  Dreadmill
 //
 //  Created by Tobi Kuyoro on 23/07/2020.
@@ -12,4 +12,3 @@ struct Identifier {
     static let logCell  = "LogCell"
     static let runSegue = "CurrentRunSegue"
 }
-

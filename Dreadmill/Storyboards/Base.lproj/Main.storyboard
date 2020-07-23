@@ -31,6 +31,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U8m-jp-JBh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="0aK-f4-iby"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMl-0a-DWW" customClass="CircularButton" customModule="Dreadmill" customModuleProvider="target">
                                 <rect key="frame" x="157" y="683" width="100" height="100"/>
@@ -64,6 +67,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="qn1-F2-FPe"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="U8m-jp-JBh" id="Grs-aI-Yuj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,11 +309,11 @@
         <!--Run-->
         <scene sceneID="tXg-qB-Ltx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yFI-Kl-gdN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yFI-Kl-gdN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qkv-I8-J71">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

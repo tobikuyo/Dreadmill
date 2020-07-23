@@ -7,14 +7,37 @@
 //
 
 import UIKit
+import MapKit
 
-class RunViewController: UIViewController {
+class RunViewController: LocationViewController {
+
+    @IBOutlet var mapView: MKMapView!
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        checkAuthStatus()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        manager?.delegate = self
+        manager?.startUpdatingLocation()
+    }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        manager?.stopUpdatingLocation()
+    }
 }
 
+extension RunViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            checkAuthStatus()
+            mapView.showsUserLocation = true
+            mapView.userTrackingMode = .follow
+        }
+    }
+}
