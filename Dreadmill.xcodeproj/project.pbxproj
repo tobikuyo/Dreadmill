@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C46270024CA262A006285EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4626FF24CA262A006285EF /* Extensions.swift */; };
 		2CD2E09224C9B7B900BC696E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E09124C9B7B900BC696E /* AppDelegate.swift */; };
 		2CD2E09424C9B7B900BC696E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E09324C9B7B900BC696E /* SceneDelegate.swift */; };
 		2CD2E09624C9B7B900BC696E /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E09524C9B7B900BC696E /* RunViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4626FF24CA262A006285EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2CD2E08E24C9B7B900BC696E /* Dreadmill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreadmill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD2E09124C9B7B900BC696E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CD2E09324C9B7B900BC696E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 				2CD2E0AE24C9B9E000BC696E /* Views */,
 				2CD2E0AC24C9B9C100BC696E /* Controllers */,
 				2CD2E0A924C9B96400BC696E /* Storyboards */,
-				2CD2E0AA24C9B97800BC696E /* Extensions */,
 				2CD2E0AB24C9B99100BC696E /* Utilities */,
 				2CD2E0AF24C9B9F600BC696E /* Fonts */,
 			);
@@ -136,17 +137,11 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		2CD2E0AA24C9B97800BC696E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		2CD2E0AB24C9B99100BC696E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				2CD2E0D524C9C4EF00BC696E /* Constants.swift */,
+				2C4626FF24CA262A006285EF /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -294,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD2E09824C9B7B900BC696E /* RunLogViewController.swift in Sources */,
+				2C46270024CA262A006285EF /* Extensions.swift in Sources */,
 				2CD2E09624C9B7B900BC696E /* RunViewController.swift in Sources */,
 				2CD2E0D824C9C9D300BC696E /* CircularButton.swift in Sources */,
 				2CD2E0D624C9C4EF00BC696E /* Constants.swift in Sources */,
