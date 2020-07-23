@@ -20,7 +20,9 @@ class CurrentRunViewController: LocationViewController {
 
     private var startLocation: CLLocation!
     private var lastLocation: CLLocation!
+    private var timer = Timer()
     private var runDistance = 0.0
+    private var counter = 0
 
     // MARK: - View Lifecycle
 
@@ -33,20 +35,31 @@ class CurrentRunViewController: LocationViewController {
         startRun()
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
-
     // MARK: - Methods
 
     private func startRun() {
         manager?.startUpdatingLocation()
         manager?.distanceFilter = 10
         manager?.delegate = self
+        startTimer()
     }
 
     private func endRun() {
         manager?.stopUpdatingLocation()
+    }
+
+    private func startTimer() {
+        durationLabel.text = counter.timeDurationToString()
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(updateCounter),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+
+    @objc private func updateCounter() {
+        counter += 1
+        durationLabel.text = counter.timeDurationToString()
     }
 
     // MARK: - IBActions
