@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct Cell {
+    static let log = "LogCell"
+}
