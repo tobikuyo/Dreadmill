@@ -34,6 +34,7 @@
 		2CD2E0D324C9BAD200BC696E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2E0C124C9BAD200BC696E /* Montserrat-SemiBold.ttf */; };
 		2CD2E0D624C9C4EF00BC696E /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E0D524C9C4EF00BC696E /* Contants.swift */; };
 		2CD2E0D824C9C9D300BC696E /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E0D724C9C9D300BC696E /* CircularButton.swift */; };
+		2CD2E0DA24C9D7A600BC696E /* CurrentRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E0D924C9D7A600BC696E /* CurrentRunViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		2CD2E0D424C9BD4200BC696E /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
 		2CD2E0D524C9C4EF00BC696E /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		2CD2E0D724C9C9D300BC696E /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		2CD2E0D924C9D7A600BC696E /* CurrentRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				2CD2E09524C9B7B900BC696E /* RunViewController.swift */,
 				2CD2E09724C9B7B900BC696E /* RunLogViewController.swift */,
+				2CD2E0D924C9D7A600BC696E /* CurrentRunViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				2CD2E0D624C9C4EF00BC696E /* Contants.swift in Sources */,
 				2CD2E09224C9B7B900BC696E /* AppDelegate.swift in Sources */,
 				2CD2E09424C9B7B900BC696E /* SceneDelegate.swift in Sources */,
+				2CD2E0DA24C9D7A600BC696E /* CurrentRunViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

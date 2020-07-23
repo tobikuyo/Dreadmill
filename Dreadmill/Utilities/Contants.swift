@@ -8,6 +8,8 @@
 
 import Foundation
 
-struct Cell {
-    static let log = "LogCell"
+struct Identifier {
+    static let logCell  = "LogCell"
+    static let runSegue = "CurrentRunSegue"
 }
+

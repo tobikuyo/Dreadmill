@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
         </array>
@@ -18,7 +21,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Run-->
+        <!--Run View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="RunViewController" customModule="Dreadmill" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,43 +30,161 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U8m-jp-JBh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="656"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN6-GI-jWU">
-                                <rect key="frame" x="171.5" y="684" width="71" height="71"/>
-                                <state key="normal" image="startRunningButton"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSC-AR-fSN">
-                                <rect key="frame" x="181.5" y="763" width="51" height="30"/>
-                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKS-Nk-pHw">
-                                <rect key="frame" x="350" y="590" width="58" height="58"/>
-                                <state key="normal" image="centerNavButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMl-0a-DWW" customClass="CircularButton" customModule="Dreadmill" customModuleProvider="target">
+                                <rect key="frame" x="157" y="683" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.30980392156862746" green="0.65485042329999998" blue="0.78513300419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6cQ-mT-bun"/>
+                                    <constraint firstAttribute="width" constant="100" id="TwT-At-DYj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="25"/>
+                                <state key="normal" title="START"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Vzj-gY-Lxw" kind="show" identifier="CurrentRunSegue" id="glE-Fb-tV7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CSC-AR-fSN" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="7Be-bT-WuO"/>
-                            <constraint firstItem="FN6-GI-jWU" firstAttribute="top" secondItem="U8m-jp-JBh" secondAttribute="bottom" constant="28" id="F65-iQ-84B"/>
-                            <constraint firstItem="U8m-jp-JBh" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="HaF-1W-wrP"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="fKS-Nk-pHw" secondAttribute="trailing" constant="6" id="WNd-nv-2yH"/>
-                            <constraint firstItem="FN6-GI-jWU" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="XYj-Vh-9nY"/>
-                            <constraint firstItem="CSC-AR-fSN" firstAttribute="top" secondItem="FN6-GI-jWU" secondAttribute="bottom" constant="8" id="ceN-qP-OWi"/>
-                            <constraint firstItem="U8m-jp-JBh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="id9-et-14q"/>
-                            <constraint firstItem="U8m-jp-JBh" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="mAc-Vj-fRi"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="CSC-AR-fSN" secondAttribute="bottom" constant="20" id="nNm-Br-pBp"/>
-                            <constraint firstItem="fKS-Nk-pHw" firstAttribute="top" secondItem="U8m-jp-JBh" secondAttribute="bottom" constant="-66" id="zJv-Qc-03C"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="fMl-0a-DWW" secondAttribute="bottom" constant="30" id="4NU-kZ-PhZ"/>
+                            <constraint firstItem="U8m-jp-JBh" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="5Ll-Gu-abG"/>
+                            <constraint firstAttribute="bottom" secondItem="U8m-jp-JBh" secondAttribute="bottom" id="5te-ZP-O2g"/>
+                            <constraint firstItem="fMl-0a-DWW" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="geg-iv-sfS"/>
+                            <constraint firstItem="U8m-jp-JBh" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="nH7-4A-noJ"/>
+                            <constraint firstItem="U8m-jp-JBh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="umo-dn-dzh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="qn1-F2-FPe"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="1525" y="-320"/>
+        </scene>
+        <!--Current Run View Controller-->
+        <scene sceneID="67z-12-Awh">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Vzj-gY-Lxw" customClass="CurrentRunViewController" customModule="Dreadmill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oRA-VZ-F44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-fW-2HL" userLabel="Time Stack">
+                                <rect key="frame" x="94" y="212.5" width="226.5" height="93.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjN-xo-P92">
+                                        <rect key="frame" x="35.5" y="0.0" width="155.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-9d-nAd">
+                                        <rect key="frame" x="0.0" y="32.5" width="226.5" height="61"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mGP-G2-Ccf" userLabel="Pace Stack">
+                                <rect key="frame" x="126.5" y="376" width="161" height="144.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVERAGE PACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQq-sP-BO7">
+                                        <rect key="frame" x="1" y="0.0" width="159" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dht-Dp-e0H">
+                                        <rect key="frame" x="0.0" y="32.5" width="161" height="85.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PER MILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-oS-ooO">
+                                        <rect key="frame" x="44" y="126" width="73.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-Ms-mNQ" userLabel="Distance Stack">
+                                <rect key="frame" x="94" y="590.5" width="226.5" height="93.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-MY-u70">
+                                        <rect key="frame" x="61" y="0.0" width="104" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtg-da-cO3">
+                                        <rect key="frame" x="0.0" y="32.5" width="226.5" height="61"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunOutline" translatesAutoresizingMaskIntoConstraints="NO" id="91a-Mq-7IW">
+                                <rect key="frame" x="66" y="767" width="232" height="75"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S25-Eg-eEl">
+                                <rect key="frame" x="274" y="767" width="75" height="75"/>
+                                <state key="normal" image="pauseButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-Ag-nTx" customClass="CircularButton" customModule="Dreadmill" customModuleProvider="target">
+                                <rect key="frame" x="76" y="774.5" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.65485042329999998" blue="0.78513300419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="50F-os-00c"/>
+                                    <constraint firstAttribute="height" constant="60" id="eN2-V1-kfA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6A-aI-qYm">
+                                <rect key="frame" x="171.5" y="795.5" width="73.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wtF-Ms-mNQ" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="0en-g4-tg6"/>
+                            <constraint firstItem="mHO-H7-Iop" firstAttribute="bottom" secondItem="91a-Mq-7IW" secondAttribute="bottom" constant="20" id="5Ld-kS-ScM"/>
+                            <constraint firstItem="mGP-G2-Ccf" firstAttribute="top" secondItem="lkm-fW-2HL" secondAttribute="bottom" constant="70" id="HTJ-eB-05F"/>
+                            <constraint firstItem="z6A-aI-qYm" firstAttribute="centerX" secondItem="91a-Mq-7IW" secondAttribute="centerX" constant="26" id="K9p-8C-uJ0"/>
+                            <constraint firstItem="S25-Eg-eEl" firstAttribute="centerY" secondItem="91a-Mq-7IW" secondAttribute="centerY" id="NJm-XK-Ckp"/>
+                            <constraint firstItem="S25-Eg-eEl" firstAttribute="leading" secondItem="91a-Mq-7IW" secondAttribute="trailing" constant="-24" id="NoY-no-xzL"/>
+                            <constraint firstItem="91a-Mq-7IW" firstAttribute="leading" secondItem="aHe-Ag-nTx" secondAttribute="trailing" constant="-70" id="Yuz-yd-nfc"/>
+                            <constraint firstItem="wtF-Ms-mNQ" firstAttribute="top" secondItem="mGP-G2-Ccf" secondAttribute="bottom" constant="70" id="aQQ-01-xxF"/>
+                            <constraint firstItem="mGP-G2-Ccf" firstAttribute="centerY" secondItem="oRA-VZ-F44" secondAttribute="centerY" id="cbC-ir-HXz"/>
+                            <constraint firstItem="aHe-Ag-nTx" firstAttribute="centerY" secondItem="S25-Eg-eEl" secondAttribute="centerY" id="iZf-GX-7j1"/>
+                            <constraint firstItem="lkm-fW-2HL" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="igN-yh-Lug"/>
+                            <constraint firstItem="z6A-aI-qYm" firstAttribute="centerY" secondItem="S25-Eg-eEl" secondAttribute="centerY" id="vnS-Jb-qBe"/>
+                            <constraint firstItem="mGP-G2-Ccf" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="wb1-8q-z6G"/>
+                            <constraint firstItem="91a-Mq-7IW" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" constant="-25" id="xIY-lS-eE1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mHO-H7-Iop"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9EB-16-bON"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRe-3K-hIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2292.753623188406" y="-320.08928571428572"/>
         </scene>
         <!--Log-->
         <scene sceneID="wg7-f3-ORb">
@@ -74,7 +195,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlV-mt-xb0">
-                                <rect key="frame" x="0.0" y="109.5" width="414" height="703.5"/>
+                                <rect key="frame" x="0.0" y="117.5" width="414" height="695.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogCell" id="HA3-ox-CRj">
@@ -138,7 +259,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY LOG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a51-rS-6Qq">
-                                <rect key="frame" x="169" y="52" width="76.5" height="37.5"/>
+                                <rect key="frame" x="169" y="60" width="76.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -146,7 +267,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="a51-rS-6Qq" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="8" id="8ZD-Qb-0JG"/>
+                            <constraint firstItem="a51-rS-6Qq" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="16" id="8ZD-Qb-0JG"/>
                             <constraint firstItem="mlV-mt-xb0" firstAttribute="top" secondItem="a51-rS-6Qq" secondAttribute="bottom" constant="20" id="CzL-2C-0zL"/>
                             <constraint firstItem="mlV-mt-xb0" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="Voe-0M-m6H"/>
                             <constraint firstItem="mlV-mt-xb0" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="VqZ-fp-9bo"/>
@@ -171,18 +292,37 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="yFI-Kl-gdN" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-25" y="5"/>
+        </scene>
+        <!--Run-->
+        <scene sceneID="tXg-qB-Ltx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yFI-Kl-gdN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qkv-I8-J71">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="VgU-9K-ekv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Jw-74-wlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
     </scenes>
     <resources>
-        <image name="centerNavButton" width="58" height="58"/>
-        <image name="startRunningButton" width="71" height="71"/>
+        <image name="endRunOutline" width="232" height="75"/>
+        <image name="pauseButton" width="75" height="75"/>
         <image name="tabbar-myLogIconGray" width="25" height="25"/>
         <image name="tabbar-runIconGray" width="27" height="28"/>
     </resources>
