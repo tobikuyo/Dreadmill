@@ -21,8 +21,10 @@ class CurrentRunViewController: LocationViewController {
     private var startLocation: CLLocation!
     private var lastLocation: CLLocation!
     private var timer = Timer()
+
     private var runDistance = 0.0
     private var counter = 0
+    private var pace = 0
 
     // MARK: - View Lifecycle
 
@@ -62,6 +64,11 @@ class CurrentRunViewController: LocationViewController {
         durationLabel.text = counter.timeDurationToString()
     }
 
+    private func calculatePace(time seconds: Int, miles: Double) -> String {
+        pace = Int(Double(seconds) / miles)
+        return pace.timeDurationToString()
+    }
+
     // MARK: - IBActions
 
     @IBAction func stopButtonTapped(_ sender: Any) {
@@ -86,6 +93,10 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
         } else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
             distanceLabel.text = runDistance.metresToMiles(places: 2).description
+
+            if counter > 0 && runDistance > 0 {
+                paceLabel.text = calculatePace(time: counter, miles: runDistance.metresToMiles(places: 2))
+            }
         }
 
         lastLocation = locations.last
