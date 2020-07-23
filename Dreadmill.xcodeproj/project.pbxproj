@@ -58,16 +58,80 @@
 		2CD2E09024C9B7B900BC696E /* Dreadmill */ = {
 			isa = PBXGroup;
 			children = (
+				2CD2E0A824C9B94F00BC696E /* Application */,
+				2CD2E0AD24C9B9D400BC696E /* Models */,
+				2CD2E0AE24C9B9E000BC696E /* Views */,
+				2CD2E0AC24C9B9C100BC696E /* Controllers */,
+				2CD2E0A924C9B96400BC696E /* Storyboards */,
+				2CD2E0AA24C9B97800BC696E /* Extensions */,
+				2CD2E0AB24C9B99100BC696E /* Utilities */,
+				2CD2E0AF24C9B9F600BC696E /* Fonts */,
+			);
+			path = Dreadmill;
+			sourceTree = "<group>";
+		};
+		2CD2E0A824C9B94F00BC696E /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				2CD2E09124C9B7B900BC696E /* AppDelegate.swift */,
 				2CD2E09324C9B7B900BC696E /* SceneDelegate.swift */,
 				2CD2E09C24C9B7BB00BC696E /* Assets.xcassets */,
 				2CD2E0A124C9B7BB00BC696E /* Info.plist */,
-				2CD2E09524C9B7B900BC696E /* FirstViewController.swift */,
-				2CD2E09724C9B7B900BC696E /* SecondViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2CD2E0A924C9B96400BC696E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				2CD2E09924C9B7B900BC696E /* Main.storyboard */,
 				2CD2E09E24C9B7BB00BC696E /* LaunchScreen.storyboard */,
 			);
-			path = Dreadmill;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2CD2E0AA24C9B97800BC696E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2CD2E0AB24C9B99100BC696E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2CD2E0AC24C9B9C100BC696E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CD2E09524C9B7B900BC696E /* FirstViewController.swift */,
+				2CD2E09724C9B7B900BC696E /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2CD2E0AD24C9B9D400BC696E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CD2E0AE24C9B9E000BC696E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CD2E0AF24C9B9F600BC696E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W485VTCC9R;
-				INFOPLIST_FILE = Dreadmill/Info.plist;
+				INFOPLIST_FILE = Dreadmill/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W485VTCC9R;
-				INFOPLIST_FILE = Dreadmill/Info.plist;
+				INFOPLIST_FILE = Dreadmill/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
