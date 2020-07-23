@@ -33,6 +33,7 @@
 		2CD2E0D224C9BAD200BC696E /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2E0C024C9BAD200BC696E /* Montserrat-SemiBoldItalic.ttf */; };
 		2CD2E0D324C9BAD200BC696E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2E0C124C9BAD200BC696E /* Montserrat-SemiBold.ttf */; };
 		2CD2E0D624C9C4EF00BC696E /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E0D524C9C4EF00BC696E /* Contants.swift */; };
+		2CD2E0D824C9C9D300BC696E /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E0D724C9C9D300BC696E /* CircularButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		2CD2E0C124C9BAD200BC696E /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		2CD2E0D424C9BD4200BC696E /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
 		2CD2E0D524C9C4EF00BC696E /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		2CD2E0D724C9C9D300BC696E /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		2CD2E0AE24C9B9E000BC696E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2CD2E0D724C9C9D300BC696E /* CircularButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			files = (
 				2CD2E09824C9B7B900BC696E /* RunLogViewController.swift in Sources */,
 				2CD2E09624C9B7B900BC696E /* RunViewController.swift in Sources */,
+				2CD2E0D824C9C9D300BC696E /* CircularButton.swift in Sources */,
 				2CD2E0D624C9C4EF00BC696E /* Contants.swift in Sources */,
 				2CD2E09224C9B7B900BC696E /* AppDelegate.swift in Sources */,
 				2CD2E09424C9B7B900BC696E /* SceneDelegate.swift in Sources */,
