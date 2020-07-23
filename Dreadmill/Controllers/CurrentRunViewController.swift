@@ -46,6 +46,13 @@ class CurrentRunViewController: LocationViewController {
         startTimer()
     }
 
+    private func pauseRun() {
+        manager?.stopUpdatingLocation()
+        timer.invalidate()
+        startLocation = nil
+        lastLocation = nil
+    }
+
     private func endRun() {
         manager?.stopUpdatingLocation()
     }
@@ -72,11 +79,14 @@ class CurrentRunViewController: LocationViewController {
     // MARK: - IBActions
 
     @IBAction func stopButtonTapped(_ sender: Any) {
+        endRun()
         navigationController?.popViewController(animated: true)
     }
 
 
     @IBAction func pauseButtonTapped(_ sender: Any) {
+        pauseButton.isSelected.toggle()
+        pauseButton.isSelected ? pauseRun() : startRun()
     }
 }
 
