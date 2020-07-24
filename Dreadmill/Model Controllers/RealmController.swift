@@ -50,7 +50,21 @@ class RealmController {
             runs = runs.sorted(byKeyPath: "date", ascending: false)
             return runs
         } catch {
+            NSLog("Error getting all runs from Realm: \(error)")
             return nil
+        }
+    }
+
+    func delete(run: Run?) {
+        guard let run = run else { return }
+
+        do {
+            let realm = try Realm(configuration: runDataConfiguration)
+            try realm.write {
+                realm.delete(run)
+            }
+        } catch {
+            NSLog("Error deleting run from Realm: \(error)")
         }
     }
 }

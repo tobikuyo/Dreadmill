@@ -33,3 +33,14 @@ extension RunLogViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension RunLogViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let runs = realmController.getAllRuns() else { return }
+            let run = runs[indexPath.row]
+            realmController.delete(run: run)
+            tableView.reloadData()
+        }
+    }
+}
