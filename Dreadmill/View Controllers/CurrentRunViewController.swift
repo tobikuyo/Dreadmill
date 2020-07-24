@@ -23,7 +23,7 @@ class CurrentRunViewController: LocationViewController {
     private var timer = Timer()
 
     private var runDistance = 0.0
-    private var counter = 0
+    private var duration = 0
     private var pace = 0
 
     // MARK: - View Lifecycle
@@ -55,10 +55,11 @@ class CurrentRunViewController: LocationViewController {
 
     private func endRun() {
         manager?.stopUpdatingLocation()
+        realmController.addRun(pace: pace, distance: runDistance, duration: duration)
     }
 
     private func startTimer() {
-        durationLabel.text = counter.timeDurationToString()
+        durationLabel.text = duration.timeDurationToString()
         timer = Timer.scheduledTimer(timeInterval: 1,
                                      target: self,
                                      selector: #selector(updateCounter),
@@ -67,8 +68,8 @@ class CurrentRunViewController: LocationViewController {
     }
 
     @objc private func updateCounter() {
-        counter += 1
-        durationLabel.text = counter.timeDurationToString()
+        duration += 1
+        durationLabel.text = duration.timeDurationToString()
     }
 
     private func calculatePace(time seconds: Int, miles: Double) -> String {
@@ -104,8 +105,8 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
             runDistance += lastLocation.distance(from: location)
             distanceLabel.text = runDistance.metresToMiles(places: 2).description
 
-            if counter > 0 && runDistance > 0 {
-                paceLabel.text = calculatePace(time: counter, miles: runDistance.metresToMiles(places: 2))
+            if duration > 0 && runDistance > 0 {
+                paceLabel.text = calculatePace(time: duration, miles: runDistance.metresToMiles(places: 2))
             }
         }
 

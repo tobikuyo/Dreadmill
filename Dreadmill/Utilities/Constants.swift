@@ -12,3 +12,7 @@ struct Identifier {
     static let logCell  = "LogCell"
     static let runSegue = "CurrentRunSegue"
 }
+
+struct RealmQueue {
+    static let label = DispatchQueue(label: "com.tobikuyoro.Dreadmill.realQueue")
+}

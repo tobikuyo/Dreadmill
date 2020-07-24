@@ -12,6 +12,7 @@ import MapKit
 class LocationViewController: UIViewController {
 
     var manager: CLLocationManager?
+    let realmController = RealmController()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -96,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CA2BFEE24CB1FF700843376 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2BFEC24CB19B200843376 /* RealmController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
 		2CD2E08524C9B7B900BC696E = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +128,8 @@
 				2CD2E0A824C9B94F00BC696E /* Application */,
 				2CD2E0AD24C9B9D400BC696E /* Models */,
 				2CD2E0AE24C9B9E000BC696E /* Views */,
-				2CD2E0AC24C9B9C100BC696E /* Controllers */,
+				2CA2BFEE24CB1FF700843376 /* Model Controllers */,
+				2CD2E0AC24C9B9C100BC696E /* View Controllers */,
 				2CD2E0A924C9B96400BC696E /* Storyboards */,
 				2CD2E0AB24C9B99100BC696E /* Utilities */,
 				2CD2E0AF24C9B9F600BC696E /* Fonts */,
@@ -157,7 +166,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		2CD2E0AC24C9B9C100BC696E /* Controllers */ = {
+		2CD2E0AC24C9B9C100BC696E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				2CFAF01D24C9FE5B004B575C /* LocationViewController.swift */,
@@ -165,14 +174,13 @@
 				2CD2E09724C9B7B900BC696E /* RunLogViewController.swift */,
 				2CD2E0D924C9D7A600BC696E /* CurrentRunViewController.swift */,
 			);
-			path = Controllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		2CD2E0AD24C9B9D400BC696E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2CA2BFEA24CB0F4800843376 /* Run.swift */,
-				2CA2BFEC24CB19B200843376 /* RealmController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
