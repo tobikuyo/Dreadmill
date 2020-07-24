@@ -9,10 +9,9 @@
 import UIKit
 import MapKit
 
-class LocationViewController: UIViewController {
+class LocationViewController: InitialViewController {
 
     var manager: CLLocationManager?
-    let realmController = RealmController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
