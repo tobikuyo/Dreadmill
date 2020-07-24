@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class CurrentRunViewController: LocationViewController {
 
@@ -21,6 +22,7 @@ class CurrentRunViewController: LocationViewController {
     private var startLocation: CLLocation!
     private var lastLocation: CLLocation!
     private var timer = Timer()
+    private var locationsList = List<Location>()
 
     private var runDistance = 0.0
     private var duration = 0
@@ -55,7 +57,7 @@ class CurrentRunViewController: LocationViewController {
 
     private func endRun() {
         manager?.stopUpdatingLocation()
-        realmController.addRun(pace: pace, distance: runDistance, duration: duration)
+        realmController.addRun(pace: pace, distance: runDistance, duration: duration, locations: locationsList)
     }
 
     private func startTimer() {
@@ -104,6 +106,11 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
         } else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
             distanceLabel.text = runDistance.metresToMiles(places: 2).description
+
+            let latitude = lastLocation.coordinate.latitude
+            let longitude = lastLocation.coordinate.longitude
+            let newLocation = Location(latitude: latitude, longitude: longitude)
+            locationsList.insert(newLocation, at: 0)
 
             if duration > 0 && runDistance > 0 {
                 paceLabel.text = calculatePace(time: duration, miles: runDistance.metresToMiles(places: 2))

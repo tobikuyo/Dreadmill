@@ -11,9 +11,9 @@ import RealmSwift
 
 class RealmController {
 
-    func addRun(pace: Int, distance: Double, duration: Int) {
+    func addRun(pace: Int, distance: Double, duration: Int, locations: List<Location>) {
         RealmQueue.label.sync {
-            let run = Run(pace: pace, distance: distance, duration: duration)
+            let run = Run(pace: pace, distance: distance, duration: duration, locations: locations)
 
             do {
                 let realm = try Realm()
