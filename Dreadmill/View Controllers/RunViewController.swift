@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class RunViewController: LocationViewController {
 
@@ -36,14 +37,18 @@ class RunViewController: LocationViewController {
         manager?.stopUpdatingLocation()
     }
 
+    // MARK: - Methods
+
     private func setupMapView() {
-        guard let overlay = addLastRun() else { return }
+        if let overlay = addLastRun()  {
+            if mapView.overlays.count > 0 {
+                mapView.removeOverlays(mapView.overlays)
+            }
 
-        if mapView.overlays.count > 0 {
-            mapView.removeOverlays(mapView.overlays)
+            mapView.addOverlay(overlay)
+        } else {
+            centerMapOnUserLocation()
         }
-
-        mapView.addOverlay(overlay)
     }
 
     private func addLastRun() -> MKPolyline? {
@@ -56,7 +61,46 @@ class RunViewController: LocationViewController {
             coordinates.append(coordinate)
         }
 
+        let region = centerOnPreviousRun(locations: lastRun.locations)
+        mapView.userTrackingMode = .none
+        mapView.setRegion(region, animated: true)
+
         return MKPolyline(coordinates: coordinates, count: lastRun.locations.count)
+    }
+
+    private func centerMapOnUserLocation() {
+        mapView.userTrackingMode = .follow
+
+        let center = mapView.userLocation.coordinate
+        let region = MKCoordinateRegion(center: center, latitudinalMeters: 500, longitudinalMeters: 500)
+        mapView.setRegion(region, animated: true)
+    }
+
+    private func centerOnPreviousRun(locations: List<Location>) -> MKCoordinateRegion {
+        guard let initialLocation = locations.first else { return MKCoordinateRegion() }
+        var minLatitude = initialLocation.latitude
+        var minLongitude = initialLocation.longitude
+        var maxLatitude = minLatitude
+        var maxLongitude = minLongitude
+
+        for location in locations {
+            minLatitude = min(minLatitude, location.latitude)
+            minLongitude = min(minLongitude, location.longitude)
+            maxLatitude = max(maxLatitude, location.latitude)
+            maxLongitude = max(maxLongitude, location.longitude)
+        }
+
+        let latitude = (minLatitude + maxLatitude) / 2
+        let longitude = (minLongitude + maxLongitude) / 2
+        let latitudeDelta = (maxLatitude - minLatitude) * 1.4
+        let longitudeDelta = (maxLongitude - minLongitude) * 1.4
+
+        return MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+                                  span: MKCoordinateSpan(latitudeDelta: latitudeDelta, longitudeDelta: longitudeDelta))
+    }
+
+    @IBAction func centerButtonTapped(_ sender: Any) {
+        centerMapOnUserLocation()
     }
 }
 
@@ -65,7 +109,6 @@ extension RunViewController: CLLocationManagerDelegate {
         if status == .authorizedWhenInUse {
             checkAuthStatus()
             mapView.showsUserLocation = true
-            mapView.userTrackingMode = .follow
         }
     }
 
