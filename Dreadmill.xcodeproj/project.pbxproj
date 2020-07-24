@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3A2FC924CB341500110227 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A2FC824CB341500110227 /* InitialViewController.swift */; };
 		2C46270024CA262A006285EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4626FF24CA262A006285EF /* Extensions.swift */; };
+		2C959FC824CB2F5300F0DABC /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C959FC724CB2F5300F0DABC /* LogTableViewCell.swift */; };
 		2CA2BFEB24CB0F4800843376 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BFEA24CB0F4800843376 /* Run.swift */; };
 		2CA2BFED24CB19B200843376 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BFEC24CB19B200843376 /* RealmController.swift */; };
 		2CD2E09224C9B7B900BC696E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E09124C9B7B900BC696E /* AppDelegate.swift */; };
@@ -44,7 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C3A2FC824CB341500110227 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2C4626FF24CA262A006285EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2C959FC724CB2F5300F0DABC /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
 		2CA2BFEA24CB0F4800843376 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		2CA2BFEC24CB19B200843376 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		2CD2E08E24C9B7B900BC696E /* Dreadmill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreadmill.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +173,7 @@
 		2CD2E0AC24C9B9C100BC696E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C3A2FC824CB341500110227 /* InitialViewController.swift */,
 				2CFAF01D24C9FE5B004B575C /* LocationViewController.swift */,
 				2CD2E09524C9B7B900BC696E /* RunViewController.swift */,
 				2CD2E09724C9B7B900BC696E /* RunLogViewController.swift */,
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				2CD2E0D724C9C9D300BC696E /* CircularButton.swift */,
+				2C959FC724CB2F5300F0DABC /* LogTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,7 +377,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD2E09824C9B7B900BC696E /* RunLogViewController.swift in Sources */,
+				2C3A2FC924CB341500110227 /* InitialViewController.swift in Sources */,
 				2C46270024CA262A006285EF /* Extensions.swift in Sources */,
+				2C959FC824CB2F5300F0DABC /* LogTableViewCell.swift in Sources */,
 				2CD2E09624C9B7B900BC696E /* RunViewController.swift in Sources */,
 				2CA2BFEB24CB0F4800843376 /* Run.swift in Sources */,
 				2CD2E0D824C9C9D300BC696E /* CircularButton.swift in Sources */,
