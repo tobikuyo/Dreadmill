@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -40,7 +40,24 @@
                             </mapView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxw-eV-Mk6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0b-eS-jZh">
+                                        <rect key="frame" x="354" y="60" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="8zb-j7-Vxq"/>
+                                            <constraint firstAttribute="height" constant="40" id="Y2L-Ov-DRk"/>
+                                        </constraints>
+                                        <state key="normal" image="compass"/>
+                                        <connections>
+                                            <action selector="centerButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Hfb-Yp-oat"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="o0b-eS-jZh" firstAttribute="top" secondItem="Dxw-eV-Mk6" secondAttribute="top" constant="60" id="DKb-0v-3Tr"/>
+                                    <constraint firstAttribute="trailing" secondItem="o0b-eS-jZh" secondAttribute="trailing" constant="20" id="zPM-Xe-Ly4"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMl-0a-DWW" customClass="CircularButton" customModule="Dreadmill" customModuleProvider="target">
                                 <rect key="frame" x="157" y="673" width="100" height="100"/>
@@ -94,63 +111,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-fW-2HL" userLabel="Time Stack">
-                                <rect key="frame" x="94" y="132.5" width="226.5" height="93.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-fW-2HL" userLabel="Time Stack">
+                                <rect key="frame" x="94.000000000000014" y="132.66666666666669" width="226.33333333333337" height="93.666666666666657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjN-xo-P92">
-                                        <rect key="frame" x="35" y="0.0" width="156.5" height="24.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CURRENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FjN-xo-P92">
+                                        <rect key="frame" x="34.666666666666657" y="0.0" width="156.66666666666666" height="24.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-9d-nAd">
-                                        <rect key="frame" x="0.0" y="32.5" width="226.5" height="61"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-9d-nAd">
+                                        <rect key="frame" x="0.0" y="32.666666666666686" width="226.33333333333334" height="61"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mGP-G2-Ccf" userLabel="Pace Stack">
-                                <rect key="frame" x="126.5" y="321" width="161" height="144.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mGP-G2-Ccf" userLabel="Pace Stack">
+                                <rect key="frame" x="126.66666666666669" y="321.33333333333337" width="161" height="144.33333333333331"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVERAGE PACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQq-sP-BO7">
-                                        <rect key="frame" x="0.5" y="0.0" width="160.5" height="24.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="AVERAGE PACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aQq-sP-BO7">
+                                        <rect key="frame" x="0.3333333333333286" y="0.0" width="160.33333333333337" height="24.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dht-Dp-e0H">
-                                        <rect key="frame" x="0.0" y="32.5" width="161" height="85.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dht-Dp-e0H">
+                                        <rect key="frame" x="0.0" y="32.666666666666679" width="161" height="85.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="70"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PER MILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-oS-ooO">
-                                        <rect key="frame" x="44" y="126" width="73.5" height="18.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PER MILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-oS-ooO">
+                                        <rect key="frame" x="43.666666666666679" y="125.99999999999999" width="73.333333333333314" height="18.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-Ms-mNQ" userLabel="Distance Stack">
-                                <rect key="frame" x="134" y="560.5" width="146" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-Ms-mNQ" userLabel="Distance Stack">
+                                <rect key="frame" x="134.33333333333337" y="560.66666666666652" width="145.66666666666663" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-MY-u70">
-                                        <rect key="frame" x="20.5" y="0.0" width="105" height="24.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DISTANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-MY-u70">
+                                        <rect key="frame" x="20.333333333333314" y="0.0" width="105" height="24.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtg-da-cO3">
-                                        <rect key="frame" x="0.0" y="32.5" width="146" height="61"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wtg-da-cO3">
+                                        <rect key="frame" x="0.0" y="32.666666666666742" width="145.66666666666666" height="61"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MILES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpm-oP-DTC">
-                                        <rect key="frame" x="49.5" y="101.5" width="47" height="18.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MILES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jpm-oP-DTC">
+                                        <rect key="frame" x="49.333333333333314" y="101.66666666666674" width="47" height="18.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -208,11 +225,12 @@
                         <constraints>
                             <constraint firstItem="lkm-fW-2HL" firstAttribute="top" secondItem="mHO-H7-Iop" secondAttribute="top" constant="88.5" id="0y1-xA-LiV"/>
                             <constraint firstItem="rSa-gq-TFH" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="Drf-wz-AKr"/>
-                            <constraint firstItem="wtF-Ms-mNQ" firstAttribute="top" secondItem="mGP-G2-Ccf" secondAttribute="bottom" constant="95" id="FDo-bh-vJn"/>
-                            <constraint firstItem="mGP-G2-Ccf" firstAttribute="top" secondItem="lkm-fW-2HL" secondAttribute="bottom" constant="95" id="IBW-7d-CBP"/>
-                            <constraint firstItem="mHO-H7-Iop" firstAttribute="bottom" secondItem="rSa-gq-TFH" secondAttribute="bottom" constant="30" id="WFA-ec-QOA"/>
+                            <constraint firstItem="wtF-Ms-mNQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="mGP-G2-Ccf" secondAttribute="bottom" constant="95" id="FDo-bh-vJn"/>
+                            <constraint firstItem="mGP-G2-Ccf" firstAttribute="top" relation="lessThanOrEqual" secondItem="lkm-fW-2HL" secondAttribute="bottom" constant="95" id="IBW-7d-CBP"/>
+                            <constraint firstItem="mHO-H7-Iop" firstAttribute="bottom" secondItem="rSa-gq-TFH" secondAttribute="bottom" constant="30" id="OST-4m-SzL"/>
                             <constraint firstItem="mGP-G2-Ccf" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="iDb-r1-tNi"/>
                             <constraint firstItem="lkm-fW-2HL" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="igN-yh-Lug"/>
+                            <constraint firstItem="rSa-gq-TFH" firstAttribute="top" relation="lessThanOrEqual" secondItem="wtF-Ms-mNQ" secondAttribute="bottom" constant="71.5" id="msa-Wv-xSj"/>
                             <constraint firstItem="wtF-Ms-mNQ" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="wNV-y1-boU"/>
                             <constraint firstItem="lkm-fW-2HL" firstAttribute="centerX" secondItem="oRA-VZ-F44" secondAttribute="centerX" id="z50-uC-mRg"/>
                         </constraints>
@@ -230,7 +248,7 @@
             </objects>
             <point key="canvasLocation" x="2292.753623188406" y="-320.08928571428572"/>
         </scene>
-        <!--Log-->
+        <!--PERFORMANCE-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="RunLogViewController" customModule="Dreadmill" customModuleProvider="target" sceneMemberID="viewController">
@@ -239,7 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlV-mt-xb0">
-                                <rect key="frame" x="0.0" y="124.5" width="414" height="688.5"/>
+                                <rect key="frame" x="0.0" y="124.66666666666669" width="414" height="688.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogCell" id="HA3-ox-CRj" customClass="LogTableViewCell" customModule="Dreadmill" customModuleProvider="target">
@@ -250,16 +268,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="77Q-mN-4HD">
-                                                    <rect key="frame" x="28" y="19" width="60.5" height="42.5"/>
+                                                    <rect key="frame" x="28.000000000000004" y="19" width="60.333333333333343" height="42"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7b-vR-GF7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7b-vR-GF7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="19.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3.2 miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l4-Qe-3NJ">
-                                                            <rect key="frame" x="0.0" y="25" width="60.5" height="17.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2 miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l4-Qe-3NJ">
+                                                            <rect key="frame" x="0.0" y="24.666666666666664" width="60.333333333333336" height="17.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -267,16 +285,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dvI-Yp-Ciz">
-                                                    <rect key="frame" x="177.5" y="18.5" width="59" height="43.5"/>
+                                                    <rect key="frame" x="177.66666666666666" y="18.333333333333332" width="59" height="43.333333333333343"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21L-Sg-kUr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="24.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21L-Sg-kUr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="24.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="per mile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="087-kK-DEr">
-                                                            <rect key="frame" x="0.0" y="28.5" width="59" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="per mile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="087-kK-DEr">
+                                                            <rect key="frame" x="0.0" y="28.666666666666668" width="59" height="14.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -284,7 +302,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23/07/2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-a6-44v">
-                                                    <rect key="frame" x="317.5" y="31.5" width="76.5" height="17.5"/>
+                                                    <rect key="frame" x="317.66666666666669" y="31.333333333333336" width="76.333333333333314" height="17.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -313,7 +331,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUN LOG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a51-rS-6Qq">
-                                <rect key="frame" x="153" y="60" width="108" height="44.5"/>
+                                <rect key="frame" x="153" y="60" width="108" height="44.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -330,7 +348,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Log" image="tabbar-myLogIconGray" selectedImage="tabbar-myLogIconGray" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="PERFORMANCE" image="log" selectedImage="log" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="tableView" destination="mlV-mt-xb0" id="TJt-mp-Fqc"/>
                     </connections>
@@ -357,11 +375,11 @@
             </objects>
             <point key="canvasLocation" x="-25" y="5"/>
         </scene>
-        <!--Run-->
+        <!--RUN-->
         <scene sceneID="tXg-qB-Ltx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yFI-Kl-gdN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" selectedImage="tabbar-runIconGray" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="RUN" image="run" selectedImage="run" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qkv-I8-J71">
@@ -378,10 +396,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="compass" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="log" width="21.333333969116211" height="21.333333969116211"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="run" width="21.333333969116211" height="21.333333969116211"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
-        <image name="tabbar-myLogIconGray" width="25" height="25"/>
-        <image name="tabbar-runIconGray" width="27" height="28"/>
     </resources>
 </document>
