@@ -16,4 +16,4 @@ A running app that tracks distance and pace during runs and maintains a history 
 
 ### Screenshots:
 
-<img src="lastRun.png" width="300"> <img src="currentRun.png" width="300"> <img src="runLog.png" width="300">
+<img src="lastRun.png" width="250"> <img src="currentRun.png" width="250"> <img src="runLog.png" width="250">
