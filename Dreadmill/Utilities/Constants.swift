@@ -13,6 +13,7 @@ struct Identifier {
     static let runSegue = "CurrentRunSegue"
 }
 
-struct RealmQueue {
-    static let label = DispatchQueue(label: "com.tobikuyoro.Dreadmill.realQueue")
+struct RealmConstants {
+    static let queue = DispatchQueue(label: "com.tobikuyoro.Dreadmill.realQueue")
+    static let configuration = "realmRunConfiguration"
 }
