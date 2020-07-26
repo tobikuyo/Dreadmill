@@ -55,4 +55,14 @@ class CurrentRunVCTests: XCTestCase {
         XCTAssertTrue(currentRunVC.timer.isValid)
         XCTAssertEqual(currentRunVC.locationsList.count, 0)
     }
+
+
+    func testTappingStopAddsRunToRealm() {
+        let currentCount = currentRunVC.realmController.getAllRuns()?.count ?? 0
+        currentRunVC.startRun()
+        currentRunVC.stopButton.sendActions(for: .touchUpInside)
+        guard let latestCount = currentRunVC.realmController.getAllRuns()?.count else { return }
+        XCTAssertNotEqual(currentCount, latestCount)
+        XCTAssertGreaterThan(latestCount, currentCount)
+    }
 }

@@ -16,6 +16,7 @@ class CurrentRunViewController: LocationViewController {
     @IBOutlet var paceLabel: UILabel!
     @IBOutlet var distanceLabel: UILabel!
     @IBOutlet var pauseButton: CircularButton!
+    @IBOutlet var stopButton: CircularButton!
 
     // MARK: - Properties
 
