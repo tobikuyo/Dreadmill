@@ -39,8 +39,11 @@ class RealmControllerTests: XCTestCase {
     }
 
     func testDeletingRunFromRealm() {
-        let runs = realmController.getAllRuns()
-        let run = runs?.first
+        guard let runs = realmController.getAllRuns() else { return }
+        let currentCount = runs.count
+        let run = runs.first
         realmController.delete(run: run)
+        let latestCount = runs.count
+        XCTAssertLessThan(latestCount, currentCount)
     }
 }
