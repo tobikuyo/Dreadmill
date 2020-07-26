@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C3A2FC924CB341500110227 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A2FC824CB341500110227 /* InitialViewController.swift */; };
 		2C3A2FCB24CB3D3900110227 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A2FCA24CB3D3900110227 /* Location.swift */; };
+		2C43EAA824CE13670092EBF6 /* RealmControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43EAA724CE13670092EBF6 /* RealmControllerTests.swift */; };
 		2C46270024CA262A006285EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4626FF24CA262A006285EF /* Extensions.swift */; };
 		2C959FC824CB2F5300F0DABC /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C959FC724CB2F5300F0DABC /* LogTableViewCell.swift */; };
 		2CA2BFEB24CB0F4800843376 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BFEA24CB0F4800843376 /* Run.swift */; };
@@ -30,6 +31,7 @@
 		2CD2E0DA24C9D7A600BC696E /* CurrentRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2E0D924C9D7A600BC696E /* CurrentRunViewController.swift */; };
 		2CFAF01E24C9FE5B004B575C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFAF01D24C9FE5B004B575C /* LocationViewController.swift */; };
 		2CFAF01F24CA04A7004B575C /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2E0D424C9BD4200BC696E /* Oswald-Bold.ttf */; };
+		6B7EB7C693D3DC64EB36DEF5 /* Pods_DreadmillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFF1716EB22994EEA7180AB /* Pods_DreadmillTests.framework */; };
 		E0A7A9C06DF8AC02FB750535 /* Pods_Dreadmill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5A4A1E1EE39AF3A832AE0 /* Pods_Dreadmill.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,15 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27AAFA14E6DB75D51D520214 /* Pods-DreadmillTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreadmillTests.debug.xcconfig"; path = "Target Support Files/Pods-DreadmillTests/Pods-DreadmillTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C3A2FC824CB341500110227 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2C3A2FCA24CB3D3900110227 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		2C43EAA724CE13670092EBF6 /* RealmControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmControllerTests.swift; sourceTree = "<group>"; };
+		2C43EAA924CE1B510092EBF6 /* DreadmillTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DreadmillTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C4626FF24CA262A006285EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2C959FC724CB2F5300F0DABC /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
 		2CA2BFEA24CB0F4800843376 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		2CA2BFEC24CB19B200843376 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		2CB4AE7424CDBABE0098BF78 /* DreadmillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreadmillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4AE7824CDBABF0098BF78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CB4AE7E24CDBB350098BF78 /* DreadmillTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DreadmillTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		2CB4AE7F24CDBB350098BF78 /* CurrentRunVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVCTests.swift; sourceTree = "<group>"; };
 		2CD2E08E24C9B7B900BC696E /* Dreadmill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreadmill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD2E09124C9B7B900BC696E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		2CD2E0D724C9C9D300BC696E /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		2CD2E0D924C9D7A600BC696E /* CurrentRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunViewController.swift; sourceTree = "<group>"; };
 		2CFAF01D24C9FE5B004B575C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		339FAEE7C6D48AA11DA28BFC /* Pods-DreadmillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreadmillTests.release.xcconfig"; path = "Target Support Files/Pods-DreadmillTests/Pods-DreadmillTests.release.xcconfig"; sourceTree = "<group>"; };
+		4BFF1716EB22994EEA7180AB /* Pods_DreadmillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreadmillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CE3C91C78AA215B202BE13 /* Pods-Dreadmill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreadmill.release.xcconfig"; path = "Target Support Files/Pods-Dreadmill/Pods-Dreadmill.release.xcconfig"; sourceTree = "<group>"; };
 		99B5A4A1E1EE39AF3A832AE0 /* Pods_Dreadmill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dreadmill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFB68B2A26D771AF8F0B42F /* Pods-Dreadmill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreadmill.debug.xcconfig"; path = "Target Support Files/Pods-Dreadmill/Pods-Dreadmill.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7EB7C693D3DC64EB36DEF5 /* Pods_DreadmillTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +114,10 @@
 		2CB4AE7524CDBABF0098BF78 /* DreadmillTests */ = {
 			isa = PBXGroup;
 			children = (
-				2CB4AE7824CDBABF0098BF78 /* Info.plist */,
 				2CB4AE7F24CDBB350098BF78 /* CurrentRunVCTests.swift */,
-				2CB4AE7E24CDBB350098BF78 /* DreadmillTests-Bridging-Header.h */,
+				2C43EAA724CE13670092EBF6 /* RealmControllerTests.swift */,
+				2C43EAA924CE1B510092EBF6 /* DreadmillTests-Bridging-Header.h */,
+				2CB4AE7824CDBABF0098BF78 /* Info.plist */,
 			);
 			path = DreadmillTests;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				99B5A4A1E1EE39AF3A832AE0 /* Pods_Dreadmill.framework */,
+				4BFF1716EB22994EEA7180AB /* Pods_DreadmillTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -233,6 +242,8 @@
 			children = (
 				CBFB68B2A26D771AF8F0B42F /* Pods-Dreadmill.debug.xcconfig */,
 				57CE3C91C78AA215B202BE13 /* Pods-Dreadmill.release.xcconfig */,
+				27AAFA14E6DB75D51D520214 /* Pods-DreadmillTests.debug.xcconfig */,
+				339FAEE7C6D48AA11DA28BFC /* Pods-DreadmillTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -244,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CB4AE7D24CDBABF0098BF78 /* Build configuration list for PBXNativeTarget "DreadmillTests" */;
 			buildPhases = (
+				79B55AC89FD32CCC25C72D11 /* [CP] Check Pods Manifest.lock */,
 				2CB4AE7024CDBABE0098BF78 /* Sources */,
 				2CB4AE7124CDBABE0098BF78 /* Frameworks */,
 				2CB4AE7224CDBABE0098BF78 /* Resources */,
+				5371ECB7127BE5FB955A8101 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +355,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5371ECB7127BE5FB955A8101 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreadmillTests/Pods-DreadmillTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreadmillTests/Pods-DreadmillTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DreadmillTests/Pods-DreadmillTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79B55AC89FD32CCC25C72D11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreadmillTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8EF3BEB3470B707889EBE9E7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB4AE8024CDBB350098BF78 /* CurrentRunVCTests.swift in Sources */,
+				2C43EAA824CE13670092EBF6 /* RealmControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +498,7 @@
 /* Begin XCBuildConfiguration section */
 		2CB4AE7B24CDBABF0098BF78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AAFA14E6DB75D51D520214 /* Pods-DreadmillTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -468,6 +522,7 @@
 		};
 		2CB4AE7C24CDBABF0098BF78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 339FAEE7C6D48AA11DA28BFC /* Pods-DreadmillTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;

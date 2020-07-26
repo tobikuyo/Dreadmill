@@ -7,27 +7,40 @@
 //
 
 import XCTest
+import RealmSwift
+@testable import Dreadmill
 
 class RealmControllerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var realmController: RealmController!
+
+    override func setUp() {
+        super.setUp()
+        realmController = RealmController()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        realmController = nil
+        super.tearDown()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddingToRealm() {
+        let currentCount = realmController.getAllRuns()?.count ?? 0
+        realmController.addRun(pace: 0, distance: 0.0, duration: 0, locations: List<Location>())
+        guard let latestCount = realmController.getAllRuns()?.count else { return }
+        XCTAssertGreaterThan(latestCount, 0, "There should be at least 1 run session now")
+        XCTAssertNotEqual(currentCount, latestCount)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAddingToRealmPerformance() {
+        measure {
+            realmController.addRun(pace: 0, distance: 0.0, duration: 0, locations: List<Location>())
         }
     }
 
+    func testDeletingRunFromRealm() {
+        let runs = realmController.getAllRuns()
+        let run = runs?.first
+        realmController.delete(run: run)
+    }
 }
