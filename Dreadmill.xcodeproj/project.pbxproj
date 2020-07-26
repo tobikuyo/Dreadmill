@@ -10,6 +10,7 @@
 		2C3A2FC924CB341500110227 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A2FC824CB341500110227 /* InitialViewController.swift */; };
 		2C3A2FCB24CB3D3900110227 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A2FCA24CB3D3900110227 /* Location.swift */; };
 		2C43EAA824CE13670092EBF6 /* RealmControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43EAA724CE13670092EBF6 /* RealmControllerTests.swift */; };
+		2C43EACD24CE4A070092EBF6 /* DreadmillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43EACC24CE4A070092EBF6 /* DreadmillUITests.swift */; };
 		2C46270024CA262A006285EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4626FF24CA262A006285EF /* Extensions.swift */; };
 		2C959FC824CB2F5300F0DABC /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C959FC724CB2F5300F0DABC /* LogTableViewCell.swift */; };
 		2CA2BFEB24CB0F4800843376 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BFEA24CB0F4800843376 /* Run.swift */; };
@@ -36,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2C43EACF24CE4A070092EBF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CD2E08624C9B7B900BC696E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CD2E08D24C9B7B900BC696E;
+			remoteInfo = Dreadmill;
+		};
 		2CB4AE7924CDBABF0098BF78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2CD2E08624C9B7B900BC696E /* Project object */;
@@ -51,6 +59,9 @@
 		2C3A2FCA24CB3D3900110227 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2C43EAA724CE13670092EBF6 /* RealmControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmControllerTests.swift; sourceTree = "<group>"; };
 		2C43EAA924CE1B510092EBF6 /* DreadmillTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DreadmillTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C43EACA24CE4A070092EBF6 /* DreadmillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreadmillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C43EACC24CE4A070092EBF6 /* DreadmillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreadmillUITests.swift; sourceTree = "<group>"; };
+		2C43EACE24CE4A070092EBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C4626FF24CA262A006285EF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2C959FC724CB2F5300F0DABC /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
 		2CA2BFEA24CB0F4800843376 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
@@ -84,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2C43EAC724CE4A070092EBF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CB4AE7124CDBABE0098BF78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C43EACB24CE4A070092EBF6 /* DreadmillUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C43EACC24CE4A070092EBF6 /* DreadmillUITests.swift */,
+				2C43EACE24CE4A070092EBF6 /* Info.plist */,
+			);
+			path = DreadmillUITests;
+			sourceTree = "<group>";
+		};
 		2CA2BFEE24CB1FF700843376 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +154,7 @@
 			children = (
 				2CD2E09024C9B7B900BC696E /* Dreadmill */,
 				2CB4AE7524CDBABF0098BF78 /* DreadmillTests */,
+				2C43EACB24CE4A070092EBF6 /* DreadmillUITests */,
 				2CD2E08F24C9B7B900BC696E /* Products */,
 				EE541EE1A38E5A87EAA9849A /* Pods */,
 				90440BFFEAB5F6D723C24B16 /* Frameworks */,
@@ -138,6 +166,7 @@
 			children = (
 				2CD2E08E24C9B7B900BC696E /* Dreadmill.app */,
 				2CB4AE7424CDBABE0098BF78 /* DreadmillTests.xctest */,
+				2C43EACA24CE4A070092EBF6 /* DreadmillUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +280,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2C43EAC924CE4A070092EBF6 /* DreadmillUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C43EAD124CE4A070092EBF6 /* Build configuration list for PBXNativeTarget "DreadmillUITests" */;
+			buildPhases = (
+				2C43EAC624CE4A070092EBF6 /* Sources */,
+				2C43EAC724CE4A070092EBF6 /* Frameworks */,
+				2C43EAC824CE4A070092EBF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C43EAD024CE4A070092EBF6 /* PBXTargetDependency */,
+			);
+			name = DreadmillUITests;
+			productName = DreadmillUITests;
+			productReference = 2C43EACA24CE4A070092EBF6 /* DreadmillUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		2CB4AE7324CDBABE0098BF78 /* DreadmillTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CB4AE7D24CDBABF0098BF78 /* Build configuration list for PBXNativeTarget "DreadmillTests" */;
@@ -300,6 +347,10 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Tobi Kuyoro";
 				TargetAttributes = {
+					2C43EAC924CE4A070092EBF6 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 2CD2E08D24C9B7B900BC696E;
+					};
 					2CB4AE7324CDBABE0098BF78 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
@@ -325,11 +376,19 @@
 			targets = (
 				2CD2E08D24C9B7B900BC696E /* Dreadmill */,
 				2CB4AE7324CDBABE0098BF78 /* DreadmillTests */,
+				2C43EAC924CE4A070092EBF6 /* DreadmillUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2C43EAC824CE4A070092EBF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CB4AE7224CDBABE0098BF78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,6 +495,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2C43EAC624CE4A070092EBF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C43EACD24CE4A070092EBF6 /* DreadmillUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CB4AE7024CDBABE0098BF78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,6 +536,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2C43EAD024CE4A070092EBF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CD2E08D24C9B7B900BC696E /* Dreadmill */;
+			targetProxy = 2C43EACF24CE4A070092EBF6 /* PBXContainerItemProxy */;
+		};
 		2CB4AE7A24CDBABF0098BF78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2CD2E08D24C9B7B900BC696E /* Dreadmill */;
@@ -496,6 +568,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2C43EAD224CE4A070092EBF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W485VTCC9R;
+				INFOPLIST_FILE = DreadmillUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tobikuyoro.DreadmillUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dreadmill;
+			};
+			name = Debug;
+		};
+		2C43EAD324CE4A070092EBF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W485VTCC9R;
+				INFOPLIST_FILE = DreadmillUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tobikuyoro.DreadmillUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dreadmill;
+			};
+			name = Release;
+		};
 		2CB4AE7B24CDBABF0098BF78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 27AAFA14E6DB75D51D520214 /* Pods-DreadmillTests.debug.xcconfig */;
@@ -698,6 +808,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2C43EAD124CE4A070092EBF6 /* Build configuration list for PBXNativeTarget "DreadmillUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C43EAD224CE4A070092EBF6 /* Debug */,
+				2C43EAD324CE4A070092EBF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2CB4AE7D24CDBABF0098BF78 /* Build configuration list for PBXNativeTarget "DreadmillTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
