@@ -61,7 +61,12 @@ class CurrentRunVCTests: XCTestCase {
         let currentCount = currentRunVC.realmController.getAllRuns()?.count ?? 0
         currentRunVC.startRun()
         currentRunVC.stopButton.sendActions(for: .touchUpInside)
-        guard let latestCount = currentRunVC.realmController.getAllRuns()?.count else { return }
+
+        guard let latestCount = currentRunVC.realmController.getAllRuns()?.count else {
+            XCTFail("The running session wasn't saved. Something is wrong")
+            return
+        }
+        
         XCTAssertNotEqual(currentCount, latestCount)
         XCTAssertGreaterThan(latestCount, currentCount)
     }

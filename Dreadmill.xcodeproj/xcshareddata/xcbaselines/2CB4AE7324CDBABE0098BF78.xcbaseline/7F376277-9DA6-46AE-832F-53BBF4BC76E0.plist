@@ -11,9 +11,11 @@
 				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
 				<dict>
 					<key>baselineAverage</key>
-					<real>0.0064601</real>
+					<real>0.00646</real>
 					<key>baselineIntegrationDisplayName</key>
 					<string>Local Baseline</string>
+					<key>maxPercentRelativeStandardDeviation</key>
+					<real>5</real>
 				</dict>
 			</dict>
 		</dict>
