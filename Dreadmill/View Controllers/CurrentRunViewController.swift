@@ -19,14 +19,14 @@ class CurrentRunViewController: LocationViewController {
 
     // MARK: - Properties
 
-    private var startLocation: CLLocation!
-    private var lastLocation: CLLocation!
-    private var timer = Timer()
-    private var locationsList = List<Location>()
+    private(set) var startLocation: CLLocation!
+    private(set) var lastLocation: CLLocation!
+    private(set) var timer = Timer()
+    private(set) var locationsList = List<Location>()
 
-    private var runDistance = 0.0
-    private var duration = 0
-    private var pace = 0
+    private(set) var runDistance = 0.0
+    private(set) var duration = 0
+    private(set) var pace = 0
 
     // MARK: - View Lifecycle
 
@@ -41,7 +41,7 @@ class CurrentRunViewController: LocationViewController {
 
     // MARK: - Methods
 
-    private func startRun() {
+    func startRun() {
         manager?.startUpdatingLocation()
         manager?.distanceFilter = 10
         manager?.delegate = self
@@ -85,7 +85,6 @@ class CurrentRunViewController: LocationViewController {
         endRun()
         navigationController?.popViewController(animated: true)
     }
-
 
     @IBAction func pauseButtonTapped(_ sender: Any) {
         pauseButton.isSelected.toggle()
