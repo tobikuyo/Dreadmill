@@ -64,12 +64,12 @@ class DreadmillUITests: XCTestCase {
         XCTAssertTrue(app.isDisplayingRunLogVC)
 
         let cells = app.tables.cells
-        let firstCell = cells.element(boundBy: 0)
-        guard cells.count > 1 else {
+        guard cells.count > 0 else {
             XCTFail("There are no running sessions yet.")
             return
         }
 
+        let firstCell = cells.element(boundBy: 0)
         firstCell.swipeLeft()
         firstCell.buttons["Delete"].tap()
     }
