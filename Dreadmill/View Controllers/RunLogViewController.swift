@@ -14,6 +14,7 @@ class RunLogViewController: InitialViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.accessibilityIdentifier = "RunLogViewController"
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -33,6 +33,7 @@ class CurrentRunViewController: LocationViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.accessibilityIdentifier = "CurrentRunViewController"
     }
 
     override func viewWillAppear(_ animated: Bool) {

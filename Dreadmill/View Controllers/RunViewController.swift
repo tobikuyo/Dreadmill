@@ -19,6 +19,7 @@ class RunViewController: LocationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkAuthStatus()
+        view.accessibilityIdentifier = "RunViewController"
     }
 
     override func viewWillAppear(_ animated: Bool) {
